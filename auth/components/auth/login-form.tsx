@@ -29,12 +29,12 @@ export const LoginForm = () => {
   const [success, setSuccess] = useState<string | undefined>("");
   const [showTwoFactor, setShowTwoFactor] = useState(false);
 
-  // const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
   // const callbackUrl = searchParams.get("callbackUrl");
-  // const urlError =
-  //   searchParams.get("error") === "OAuthAccountNotLinked"
-  //     ? "Email already in use with different Provider!"
-  //     : "";
+  const urlError =
+    searchParams.get("error") === "OAuthAccountNotLinked"
+      ? "Email already in use with different Provider!"
+      : "";
 
 
   const form = useForm<z.infer<typeof LoginSchema>>({
