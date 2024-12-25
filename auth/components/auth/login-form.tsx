@@ -6,7 +6,6 @@
 // import { Input } from "../../components/ui/input";
 // import { useSearchParams } from "next/navigation";
 
-
 // import CardWrapper from "../auth/card-wrapper";
 // import {
 //   Form,
@@ -37,7 +36,6 @@
 //       ? "Email already in use with different Provider!"
 //       : "";
 
-
 //   const form = useForm<z.infer<typeof LoginSchema>>({
 //     resolver: zodResolver(LoginSchema),
 //     defaultValues: {
@@ -56,16 +54,14 @@
 //         .then((data) => {
 //           setError(data.error)
 //           setSuccess(data.success)
-          
 
 //           // if (data?.twoFactor) {
 //           //   setShowTwoFactor(true);
 //           // }
 //         })
-        
+
 //     });
 //   };
-
 
 //   return (
 //     <CardWrapper
@@ -125,7 +121,6 @@
 //   );
 // };
 
-
 "use client";
 
 import * as z from "zod";
@@ -179,7 +174,7 @@ const LoginForm = () => {
     setSuccess("");
 
     startTransition(() => {
-      login(values, callbackUrl )
+      login(values, callbackUrl)
         .then((data) => {
           if (data?.error) {
             form.reset();
@@ -201,13 +196,16 @@ const LoginForm = () => {
 
   return (
     <CardWrapper
-      headerLabel="Welcome back"
+      headerLabel="Login"
       backButtonLabel="Don't have an account?"
       backButtonHref="/auth/register"
       showSocial
     >
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-6 bg-gradient-to-br from-blue-900 via-purple-800 to-gray-900 p-8 rounded-xl shadow-lg backdrop-blur-md"
+        >
           <div className="space-y-4">
             {showTwoFactor && (
               <>
@@ -217,12 +215,15 @@ const LoginForm = () => {
                   name="code"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Two Factor Code</FormLabel>
+                      <FormLabel className="text-sm font-semibold text-white">
+                        Two Factor Code
+                      </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           disabled={isPending}
-                          placeholder="123456"
+                          placeholder="******"
+                          className="bg-white/10 text-white border-none focus:ring-2 focus:ring-purple-400"
                         />
                       </FormControl>
                       <FormMessage />
@@ -239,15 +240,19 @@ const LoginForm = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="text-sm font-semibold text-white">
+                        Email
+                      </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           disabled={isPending}
-                          placeholder="john.doe@example.com"
+                          placeholder="example@example.com"
                           type="email"
+                          className="bg-white/10 text-white border-none focus:ring-2 focus:ring-blue-400 placeholder:text-white"
                         />
                       </FormControl>
+
                       <FormMessage />
                     </FormItem>
                   )}
@@ -259,20 +264,23 @@ const LoginForm = () => {
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Password</FormLabel>
+                      <FormLabel className="text-sm font-semibold text-white">
+                        Password
+                      </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           disabled={isPending}
                           placeholder="******"
                           type="password"
+                          className="bg-white/10 text-white border-none focus:ring-2 focus:ring-pink-400 placeholder:text-white"
                         />
                       </FormControl>
                       <Button
                         size="sm"
                         variant="link"
                         asChild
-                        className="px-0 font-normal"
+                        className="text-pink-300 hover:underline"
                       >
                         <Link href="/auth/reset">Forgot password?</Link>
                       </Button>
@@ -285,7 +293,11 @@ const LoginForm = () => {
           </div>
           <FormError message={error || urlError} />
           <FormSucess message={success} />
-          <Button disabled={isPending} type="submit" className="w-full">
+          <Button
+            disabled={isPending}
+            type="submit"
+            className="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-500 text-white rounded-lg hover:from-indigo-500 hover:to-purple-600 shadow-lg transition-transform transform hover:scale-105"
+          >
             {showTwoFactor ? "Confirm" : "Login"}
           </Button>
         </form>

@@ -8,7 +8,7 @@ import { getTwoFactorTokenByEmail } from "@/data/two-factor-token";
 
 export const generatePasswordResetToken = async (email: string) => {
   const token = uuidv4();
-  const expires = new Date(new Date().getTime() + 3600 * 1000);
+  const expires = new Date(new Date().getTime() + 5 * 60 * 1000);
 
   // Uncomment the below section if you want to handle existing tokens
   const existingToken = await getPasswordResetTokenByEmail(email);

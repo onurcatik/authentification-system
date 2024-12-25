@@ -57,7 +57,7 @@ const RegisterForm = () => {
       showSocial
     >
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 bg-gradient-to-br from-blue-900 via-purple-800 to-gray-900 p-8 rounded-xl shadow-lg backdrop-blur-md">
           <div className="space-y-4">
             {/* Name */}
             <FormField
@@ -65,12 +65,13 @@ const RegisterForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel className="text-white">Name</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="John Doe"
+                      placeholder="Example Name"
+                      className="bg-white/10 text-white border-none focus:ring-2 focus:ring-pink-400 placeholder:text-white"
                     />
                   </FormControl>
                   <FormMessage />
@@ -84,13 +85,14 @@ const RegisterForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className="text-white">Email</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
                       placeholder="john.doe@example.com"
                       type="email"
+                      className="bg-white/10 text-white border-none focus:ring-2 focus:ring-pink-400 placeholder:text-white"
                     />
                   </FormControl>
                   <FormMessage />
@@ -104,13 +106,14 @@ const RegisterForm = () => {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel className="text-white">Password</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
                       placeholder="******"
                       type="password"
+                      className="bg-white/10 text-white border-none focus:ring-2 focus:ring-pink-400 placeholder:text-white"
                     />
                   </FormControl>
                   <FormMessage />
