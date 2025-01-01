@@ -228,8 +228,8 @@ export const UserInfo = ({ user, label }: UserInfoProps) => {
       {/* Content Section */}
       <CardContent className="space-y-6 relative z-10">
         <InfoRow label="ID:" value={user?.id} />
-        <InfoRow label="Name:" value={user?.name} />
-        <InfoRow label="Email:" value={user?.email} />
+        <InfoRow label="Name:" value={user?.name ?? undefined} />
+        <InfoRow label="Email:" value={user?.email ?? undefined} />
         <InfoRow label="Role:" value={user?.role} />
 
         {/* Two Factor Authentication Section */}
