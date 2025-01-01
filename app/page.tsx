@@ -44,7 +44,7 @@ export default function Home() {
             onClick={navigateToLogin} // Add onClick to handle navigation
             className="
               px-8 py-3 text-lg font-medium transition transform 
-              bg-gradient-to-r from-purple-700 to-indigo-600 hover:scale-105
+              bg-gradient-to-r from-blue-500 to-blue-500 hover:scale-105
               hover:bg-gradient-to-l rounded-lg shadow-md
             "
           >
