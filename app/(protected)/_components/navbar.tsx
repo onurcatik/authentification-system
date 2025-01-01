@@ -112,7 +112,7 @@ export const Navbar = () => {
       </div>
 
       {/* User Profile Section */}
-      <UserButton className="hover:scale-105 transition-transform duration-200" />
+      <UserButton />
     </nav>
   );
 };
