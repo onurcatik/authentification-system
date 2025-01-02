@@ -766,7 +766,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="font-[sans-serif] bg-white md:h-screen ">
+    <div className="font-[sans-serif] bg-white md:h-screen h-full ">
       <div className="grid md:grid-cols-2 items-center gap-8 h-full">
         <div className="max-md:order-1 p-4">
           <img
@@ -776,9 +776,9 @@ const LoginForm = () => {
           />
         </div>
 
-        <div className="flex items-center md:p-8 p-4 bg-blue-500 h-full lg:w-11/12 lg:ml-auto">
+        <div className="flex items-center md:p-8 p-4 bg-blue-500 h-full lg:w-11/12 lg:ml-auto  w-[610px]">
           {/* Login Form */}
-          <div className=" rounded-none p-4 max-w-md  max-md:auto lg:ml-24 ">
+          <div className=" rounded-none p-4 max-w-md  max-md:auto lg:ml-24 relative left-32">
             <CardWrapper
               headerLabel="Login"
               backButtonLabel="Don't have an account?"
@@ -806,7 +806,7 @@ const LoginForm = () => {
                                 {...field}
                                 disabled={isPending}
                                 placeholder="******"
-                                className="bg-white border-none focus:ring-2 focus:ring-purple-400 text-black"
+                                className="bg-white/10 text-white border-none focus:ring-2 focus:ring-purple-400"
                               />
                             </FormControl>
                             <FormMessage />

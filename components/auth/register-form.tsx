@@ -359,9 +359,9 @@ const RegisterForm = () => {
           />
         </div>
 
-        <div className="flex items-center md:p-8 p-6 bg-blue-500 h-full lg:w-11/12 lg:ml-auto">
+        <div className="flex items-center md:p-8 p-6 bg-blue-500 h-full lg:w-11/12 lg:ml-auto w-[600px]">
         {/* bg-[#0C172C] */}
-        <div className=" rounded-lg p-8 max-w-md  max-md:auto lg:ml-28  border-2 border-collapse border-white">
+        <div className=" rounded-lg p-8 max-w-md  max-md:auto lg:ml-28  border-2 border-collapse border-white relative left-32">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
