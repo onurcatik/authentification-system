@@ -71,7 +71,7 @@ export const Navbar = () => {
           className={`text-lg font-semibold ${
             pathname === "/server"
               ? "bg-white text-black shadow-md"
-              : "bg-white text-black hover:bg-green-400 hover:text-black"
+              : "bg-white text-black hover:bg-blue-700 hover:text-black"
           }`}
         >
           <Link href="/server">Server</Link>
@@ -82,7 +82,7 @@ export const Navbar = () => {
           className={`text-lg font-semibold ${
             pathname === "/client"
               ? "bg-white text-black shadow-md"
-              : "bg-white text-black hover:bg-green-400 hover:text-black"
+              : "bg-white text-black hover:bg-blue-700 hover:text-black"
           }`}
         >
           <Link href="/client">Client</Link>
@@ -93,7 +93,7 @@ export const Navbar = () => {
           className={`text-lg font-semibold ${
             pathname === "/admin"
               ? "bg-white text-blue-700 shadow-md"
-              : "bg-white text-black hover:bg-green-400 hover:text-black"
+              : "bg-white text-black hover:bg-blue-700 hover:text-black"
           }`}
         >
           <Link href="/admin">Admin</Link>
@@ -104,7 +104,7 @@ export const Navbar = () => {
           className={`text-lg font-semibold ${
             pathname === "/settings"
               ? "bg-white text-black shadow-md"
-              : "bg-white text-black hover:bg-green-400 hover:text-black"
+              : "bg-white text-black hover:bg-blue-700 hover:text-black"
           }`}
         >
           <Link href="/settings">Settings</Link>
@@ -112,7 +112,9 @@ export const Navbar = () => {
       </div>
 
       {/* User Profile Section */}
-      <UserButton />
+      <div className="hover:scale-105 transition-transform duration-200">
+        <UserButton />
+      </div>
     </nav>
   );
 };

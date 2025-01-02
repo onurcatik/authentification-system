@@ -67,13 +67,14 @@ const NewPasswordForm = () => {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel className="text-white">Password</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
                       placeholder="******"
                       type="password"
+                      className="placeholder:text-black bg-white"
                     />
                   </FormControl>
                   <FormMessage />

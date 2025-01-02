@@ -15,8 +15,8 @@ interface HeaderProps {
 const Header = ({ label }: HeaderProps) => {
   return (
     <div className="w-full flex flex-col gap-y-4 items-center justify-center ">
-      <h1 className={cn("text-4xl font-bold text-black", font.className)}>Auth</h1>
-      <p className="text-lg font-bold text-black">{label}</p>
+      <h1 className={cn("text-4xl font-bold text-white", font.className)}></h1>
+      <p className="text-4xl font-bold text-white">{label}</p>
     </div>
   );
 };

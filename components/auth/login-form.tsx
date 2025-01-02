@@ -766,11 +766,19 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="font-[sans-serif]">
-      <div className="min-h-screen flex flex-col items-center justify-center py-6 px-4">
-        <div className="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full">
+    <div className="font-[sans-serif] bg-white md:h-screen ">
+      <div className="grid md:grid-cols-2 items-center gap-8 h-full">
+        <div className="max-md:order-1 p-4">
+          <img
+            src="https://readymadeui.com/login-image.webp"
+            className="lg:max-w-[85%] w-full h-full object-contain block mx-auto"
+            alt="login-image"
+          />
+        </div>
+
+        <div className="flex items-center md:p-8 p-4 bg-blue-500 h-full lg:w-11/12 lg:ml-auto">
           {/* Login Form */}
-          <div className="border border-gray-300 rounded-lg p-6 max-w-md shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] max-md:mx-auto">
+          <div className=" rounded-none p-4 max-w-md  max-md:auto lg:ml-24 ">
             <CardWrapper
               headerLabel="Login"
               backButtonLabel="Don't have an account?"
@@ -780,7 +788,8 @@ const LoginForm = () => {
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-6 bg-gradient-to-br from-blue-500 via-blue-500 to-blue-500 p-8 rounded-xl shadow-lg backdrop-blur-md"
+                    className="space-y-6 p-0"
+                   // className="space-y-6 bg-gradient-to-br from-blue-500 via-blue-500 to-blue-500 p-8 rounded-xl shadow-lg backdrop-blur-md"
                 >
                   <div className="space-y-4">
                     {showTwoFactor ? (
@@ -797,7 +806,7 @@ const LoginForm = () => {
                                 {...field}
                                 disabled={isPending}
                                 placeholder="******"
-                                className="bg-white/10 text-white border-none focus:ring-2 focus:ring-purple-400"
+                                className="bg-white border-none focus:ring-2 focus:ring-purple-400 text-black"
                               />
                             </FormControl>
                             <FormMessage />
@@ -822,7 +831,7 @@ const LoginForm = () => {
                                   disabled={isPending}
                                   placeholder="example@example.com"
                                   type="email"
-                                  className="bg-white/10 text-white border-none focus:ring-2 focus:ring-blue-400 placeholder:text-white"
+                                  className="bg-white w-[360px] text-black border-none focus:ring-2 focus:ring-blue-400 placeholder:text-black"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -844,7 +853,7 @@ const LoginForm = () => {
                                   disabled={isPending}
                                   placeholder="******"
                                   type="password"
-                                  className="bg-white/10 text-white border-none focus:ring-2 focus:ring-pink-400 placeholder:text-white"
+                                  className="bg-white w-[360px] text-black border-none focus:ring-2 focus:ring-pink-400 placeholder:text-black"
                                 />
                               </FormControl>
                               <Button
@@ -867,7 +876,7 @@ const LoginForm = () => {
                   <Button
                     disabled={isPending}
                     type="submit"
-                    className="w-full py-3 bg-gradient-to-r from-blue-700 to-blue-700x text-white rounded-lg hover:from-indigo-500 hover:to-purple-600 shadow-lg transition-transform transform hover:scale-105"
+                    className="w-[360px] py-3 bg-gradient-to-r from-blue-700 to-blue-700 text-white rounded-lg hover:from-blue-900 hover:to-blue-900 shadow-lg transition-transform transform hover:scale-105"
                   >
                     {showTwoFactor ? "Confirm" : "Login"}
                   </Button>
@@ -876,13 +885,7 @@ const LoginForm = () => {
             </CardWrapper>
           </div>
           {/* Image Section */}
-          <div className="lg:h-[400px] md:h-[300px] max-md:mt-8">
-            <img
-              src="https://readymadeui.com/login-image.webp"
-              className="w-full h-full max-md:w-4/5 mx-auto block object-cover"
-              alt="Dining Experience"
-            />
-          </div>
+          
         </div>
       </div>
     </div>

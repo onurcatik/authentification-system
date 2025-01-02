@@ -194,6 +194,7 @@ const AdminPage = () => {
           <RoleGate allowedRole={UserRole.ADMIN}>
             <FormSucess
               message="Welcome, Admin! You have exclusive access."
+              className="text-center text-blue-500 font-medium"
             />
           </RoleGate>
           <div className="flex flex-col md:flex-row items-center justify-between p-4 rounded-xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-lg hover:shadow-xl transition-shadow">

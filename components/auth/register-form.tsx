@@ -349,25 +349,26 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="font-[sans-serif] bg-white md:h-screen">
+    <div className="font-[sans-serif] bg-white md:h-screen h-full">
       <div className="grid md:grid-cols-2 items-center gap-8 h-full">
         <div className="max-md:order-1 p-4">
           <img
-            src="https://readymadeui.com/signin-image.webp"
+            src="https://readymadeui.com/login-image.webp"
             className="lg:max-w-[85%] w-full h-full object-contain block mx-auto"
             alt="login-image"
           />
         </div>
 
-        <div className="flex items-center md:p-8 p-6 bg-green-900 h-full lg:w-11/12 lg:ml-auto">
+        <div className="flex items-center md:p-8 p-6 bg-blue-500 h-full lg:w-11/12 lg:ml-auto">
         {/* bg-[#0C172C] */}
+        <div className=" rounded-lg p-8 max-w-md  max-md:auto lg:ml-28  border-2 border-collapse border-white">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
               className="max-w-lg w-full mx-auto"
             >
               <div className="mb-12">
-                <h3 className="text-3xl font-bold text-yellow-400">
+                <h3 className="text-3xl font-bold text-white relative left-10 top-4">
                   Create an account
                 </h3>
               </div>
@@ -385,7 +386,7 @@ const RegisterForm = () => {
                         {...field}
                         disabled={isPending}
                         placeholder="Enter name"
-                        className="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 px-2 py-3 outline-none"
+                        className="w-[360px] bg-transparent text-sm text-black bg-white border-gray-300 focus:border-yellow-400 px-2 py-3 outline-none placeholder:text-black"
                       />
                     </FormControl>
                     <FormMessage />
@@ -407,7 +408,7 @@ const RegisterForm = () => {
                         disabled={isPending}
                         placeholder="Enter email"
                         type="email"
-                        className="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 px-2 py-3 outline-none"
+                        className="w-[360px] bg-transparent text-sm text-black bg-white border-gray-300  px-2 py-3 outline-none placeholder:text-black"
                       />
                     </FormControl>
                     <FormMessage />
@@ -429,7 +430,7 @@ const RegisterForm = () => {
                         disabled={isPending}
                         placeholder="Enter password"
                         type="password"
-                        className="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 px-2 py-3 outline-none"
+                        className="w-[360px] bg-transparent text-sm text-black bg-white border-gray-300  px-2 py-3 outline-none placeholder:text-black"
                       />
                     </FormControl>
                     <FormMessage />
@@ -437,26 +438,7 @@ const RegisterForm = () => {
                 )}
               />
 
-              <div className="flex items-center mt-8">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 shrink-0 rounded"
-                />
-                <label
-                  htmlFor="remember-me"
-                  className="text-white ml-3 block text-sm"
-                >
-                  I accept the
-                  <a
-                    href="javascript:void(0);"
-                    className="text-yellow-500 font-semibold hover:underline ml-1"
-                  >
-                    Terms and Conditions
-                  </a>
-                </label>
-              </div>
+              
 
               <FormError message={error} />
               <FormSucess message={sucess} />
@@ -464,7 +446,7 @@ const RegisterForm = () => {
               <div className="mt-12">
                 <Button
                   type="submit"
-                  className="w-max shadow-xl py-3 px-6 text-sm text-gray-800 font-semibold rounded-md bg-transparent bg-yellow-400 hover:bg-yellow-500 focus:outline-none"
+                  className="w-[360px] shadow-xl py-3 px-6 text-sm text-white font-semibold rounded-md bg-transparent bg-yellow-400 hover:bg-yellow-500 focus:outline-none"
                 >
                   Register
                 </Button>
@@ -472,7 +454,7 @@ const RegisterForm = () => {
                   Already have an account?
                   <a
                     href="/auth/login"
-                    className="text-yellow-400 font-semibold hover:underline ml-1"
+                    className="text-white font-semibold hover:underline ml-1"
                   >
                     Login here
                   </a>
@@ -482,6 +464,7 @@ const RegisterForm = () => {
           </Form>
         </div>
       </div>
+    </div>
     </div>
   );
 };
