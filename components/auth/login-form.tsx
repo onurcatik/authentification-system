@@ -767,18 +767,18 @@ const LoginForm = () => {
 
   return (
     <div className="font-[sans-serif] bg-white md:h-screen h-full ">
-      <div className="grid md:grid-cols-2 items-center gap-8 h-full">
+      <div className="grid md:grid-cols-2 items-center gap-8 h-full ">
         <div className="max-md:order-1 p-4">
           <img
             src="https://readymadeui.com/login-image.webp"
-            className="lg:max-w-[85%] w-full h-full object-contain block mx-auto"
+            className="lg:max-w-[85%] w-full h-full object-contain block pl-36"
             alt="login-image"
           />
         </div>
 
-        <div className="flex items-center md:p-8 p-4 bg-blue-500 h-full lg:w-11/12 lg:ml-auto  w-[610px]">
+        <div className="flex items-center md:p-8 p-4 bg-blue-500 h-full lg:w-11/12 lg:ml-auto  w-[630px]">
           {/* Login Form */}
-          <div className=" rounded-none p-4 max-w-md  max-md:auto lg:ml-24 relative left-32">
+          <div className=" rounded-none p-4 max-w-md  max-md:auto lg:ml-24 relative left-40">
             <CardWrapper
               headerLabel="Login"
               backButtonLabel="Don't have an account?"
