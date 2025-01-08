@@ -9,8 +9,6 @@
 - [Usage](#usage)
 - [Key Features](#key-features)
 - [Project Structure](#project-structure)
-- [Milestones](#milestones)
-- [Gantt Chart](#gantt-chart)
 - [Contributing](#contributing)
 
 
