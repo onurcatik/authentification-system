@@ -1,46 +1,31 @@
-# Authentication System
-
-
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Key Features](#key-features)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-
-
-
----
+# Advanced Authentication System
 
 ## Project Overview
 
-**Authentication System** is a comprehensive and secure solution designed to streamline user management, authentication, and authorization for web applications. Addressing the common challenges of implementing robust security measures, this system integrates multiple authentication methods, including OAuth and Two-Factor Authentication (2FA), to enhance both security and user experience. Whether you're building a small project or a large-scale application, our system offers flexibility and scalability to meet your needs.
+The **Advanced Authentication System** is a secure and scalable solution designed to streamline user authentication, authorization, and management for modern web applications. This system integrates multiple authentication methods, such as OAuth and Two-Factor Authentication (2FA), to improve both security and user experience. Whether your application is small or enterprise-level, this project offers a flexible architecture to meet various needs.
 
 ---
 
 ## Features
 
-- **User Authentication:**
-  - **Email and Password Login:** Secure login system using traditional email and password credentials.
-  - **OAuth Integration with Google and GitHub:** Allow users to authenticate using their existing Google or GitHub accounts for convenience and enhanced security.
-  - **Two-Factor Authentication (2FA):** Adds an extra layer of security by requiring a second form of verification via email or authenticator apps.
+### **User Authentication**
+- **Email and Password Login:** Securely authenticate users with traditional credentials.
+- **OAuth Integration:** Enable users to sign in with Google or GitHub accounts.
+- **Two-Factor Authentication (2FA):** Enhance security with email-based or authenticator app verification.
 
-- **User Management:**
-  - **User Registration and Profile Management:** Enables users to create accounts and manage their personal information.
-  - **Email Verification and Password Reset:** Ensures account security by verifying user emails and providing secure password recovery options.
-  - **Admin Dashboard:** A centralized interface for administrators to manage users and oversee content effectively.
+### **User Management**
+- **User Registration and Profile Management:** Allow users to create and update accounts.
+- **Email Verification and Password Reset:** Ensure account security with email verification and password recovery.
+- **Admin Dashboard:** Manage users and content through an intuitive admin interface.
 
-- **Advanced Features:**
-  - **Responsive and Reusable UI Components:** Provides a consistent and adaptable user interface across different devices.
-  - **Middleware for Session Handling and Route Protection:** Secures application routes and manages user sessions seamlessly.
-  - **Backend Integration with Prisma and a Relational Database:** Utilizes Prisma for efficient database interactions and management.
+### **Advanced Features**
+- **Responsive and Reusable UI Components:** Consistent interface adaptable to various devices.
+- **Session Management and Route Protection:** Safeguard routes with middleware for user sessions.
+- **Database Integration:** Backend powered by Prisma and a relational database for efficient data handling.
 
-- **Deployment:**
-  - **Ready for Deployment on Platforms like Vercel, AWS, or Netlify:** Simplifies the deployment process across popular cloud platforms.
-  - **Continuous Integration/Continuous Deployment (CI/CD) Pipelines:** Automates testing and deployment to ensure rapid and reliable updates.
+### **Deployment Ready**
+- Deployable on platforms like Vercel, AWS, and Netlify.
+- CI/CD support for automated testing and deployment.
 
 ---
 
@@ -50,29 +35,27 @@ Follow these steps to set up the project locally:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/comprehensive-auth-system.git
-   cd comprehensive-auth-system
+   git clone https://github.com/onurcatik/authentification-system.git
+   cd authentification-system
    ```
 
 2. **Install Dependencies:**
    ```bash
-   # For server
+   # Install server dependencies
    cd server
    npm install
 
-   # For client
+   # Install client dependencies
    cd ../client
    npm install
    ```
 
-
-
 3. **Run the Application:**
    ```bash
-   # In server directory
+   # Start the server (inside the server directory)
    npm run dev
 
-   # In client directory
+   # Start the client (inside the client directory)
    npm run start
    ```
 
@@ -80,46 +63,44 @@ Follow these steps to set up the project locally:
 
 ## Usage
 
-Once the application is running locally:
+After starting the application:
 
 1. **Access the Home Page:**
-   - Open your browser and navigate to `http://localhost:3000` to view the homepage.
-  
+   - Navigate to `http://localhost:3000` in your browser to view the homepage.
 
 2. **Register a New User:**
-   - Click on the "Register" button and fill in the required details.
-   - After registration, verify your email through the link sent to your inbox.
+   - Click on "Register" and complete the form.
+   - Verify your email by clicking the link sent to your inbox.
 
+3. **Log In:**
+   - Use your credentials or sign in via Google/GitHub.
 
-3. **Login:**
-   - Use your registered credentials or sign in via Google/GitHub OAuth.
-
-
-4. **Enable Two-Factor Authentication (2FA):**
-   - Navigate to the settings page to enable 2FA for enhanced security.
- 
+4. **Enable Two-Factor Authentication:**
+   - Visit the settings page to enable 2FA for your account.
 
 5. **Admin Dashboard:**
    - Access the admin panel to manage users and content.
-   - **Note:** Admin privileges are granted to specific users. To obtain admin access, contact the system administrator.
-
+   - *Note:* Admin access is restricted to authorized users.
 
 ---
-
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! To contribute:
 
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a Pull Request.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m 'Add a new feature'
+   ```
+4. Push the branch to your fork:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Open a Pull Request (PR).
 
-Please ensure your code adheres to the project's coding standards and includes appropriate tests.
-
----
-
-
-
+Ensure your code follows the project's coding standards and includes relevant tests.
