@@ -12,7 +12,7 @@ export const LogoutButton = ({ children }: LogoutButtonProps) => {
 
   const onClick = async () => {
     await logout(); // Logout işlemini tamamlayın
-    router.push("/auth/login"); // Ana sayfaya yönlendirin
+    router.push("/"); // Ana sayfaya yönlendirin
   };
 
   return (

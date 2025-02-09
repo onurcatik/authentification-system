@@ -52,7 +52,7 @@ const ResetForm = () => {
     <CardWrapper
       headerLabel="Forgot your password?"
       backButtonLabel="Back to login"
-      backButtonHref="/auth/login"
+      backButtonHref="/"
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -64,14 +64,16 @@ const ResetForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input
+                  <div className="form-control">
+                    <input
                       {...field}
                       disabled={isPending}
-                      placeholder="john.doe@example.com"
+                      placeholder="example@example.com"
                       type="email"
+                      className="placeholder-white bg-blue-700 text-white p-2 rounded"
                     />
-                  </FormControl>
+                  </div>
+
                   <FormMessage />
                 </FormItem>
               )}

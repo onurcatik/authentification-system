@@ -6,9 +6,11 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { signIn } from 'next-auth/react'; // Assuming you're using NextAuth
+// import { signIn } from 'next-auth/react'; 
+// 1) REMOVE the FontAwesome imports since you're no longer using them
+
+// 2) Import your new Social component
+import Social from "./social";
 
 // Import your LoginSchema and action
 import { LoginSchema } from '@/schemas';
@@ -28,6 +30,12 @@ const LoginForm = () => {
       code: '', // two-factor code (if needed)
     },
   });
+
+  // 3) We no longer need handleGoogleLogin or handleGithubLogin,
+  //    as those are now handled in the <Social /> component
+  //
+  // const handleGoogleLogin = () => { signIn('google'); };
+  // const handleGithubLogin = () => { signIn('github'); };
 
   const onSubmit: SubmitHandler<z.infer<typeof LoginSchema>> = (values) => {
     setLoginError('');
@@ -51,20 +59,10 @@ const LoginForm = () => {
     });
   };
 
-  // Handlers for social login
-  const handleGoogleLogin = () => {
-    // Trigger NextAuth's signIn for Google. You may have to configure this provider in your [...nextauth].js file.
-    signIn('google');
-  };
-
-  const handleGithubLogin = () => {
-    // Trigger NextAuth's signIn for GitHub.
-    signIn('github');
-  };
-
   return (
     <form onSubmit={loginForm.handleSubmit(onSubmit)} className="sign-in-form">
       <h2 className="title">Sign in</h2>
+
       {showTwoFactor ? (
         <div className="input-field">
           <i className="fas fa-key"></i>
@@ -100,36 +98,19 @@ const LoginForm = () => {
           </Link>
         </>
       )}
+
       {loginError && <p className="error">{loginError}</p>}
       {loginSuccess && <p className="success">{loginSuccess}</p>}
+
       <input
         type="submit"
         value={showTwoFactor ? 'Confirm' : 'Login'}
         className="btn solid"
       />
-      <p className="social-text">Or Sign in with social platforms</p>
-      <div className="social-media">
-        <a
-          href="#"
-          className="social-icon"
-          onClick={(e) => {
-            e.preventDefault();
-            handleGoogleLogin();
-          }}
-        >
-          <FontAwesomeIcon icon={faGoogle} />
-        </a>
-        <a
-          href="#"
-          className="social-icon"
-          onClick={(e) => {
-            e.preventDefault();
-            handleGithubLogin();
-          }}
-        >
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-      </div>
+
+      {/* 4) Use the Social component below */}
+      <p className="social-text">Or sign in with social platforms</p>
+      <Social />
     </form>
   );
 };

@@ -5,8 +5,8 @@ import { useState, useTransition } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { signIn } from 'next-auth/react'; // NextAuth signIn function
 
 // Import your RegisterSchema and action
@@ -97,26 +97,8 @@ const RegisterForm = ({ onSignInClick }: RegisterFormProps) => {
       <input type="submit" className="btn" value="Sign up" />
       <p className="social-text">Or Sign up with social platforms</p>
       <div className="social-media">
-        <a
-          href="#"
-          className="social-icon"
-          onClick={(e) => {
-            e.preventDefault();
-            handleGoogleSignUp();
-          }}
-        >
-          <FontAwesomeIcon icon={faGoogle} />
-        </a>
-        <a
-          href="#"
-          className="social-icon"
-          onClick={(e) => {
-            e.preventDefault();
-            handleGithubSignUp();
-          }}
-        >
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
+       
+       
       </div>
       <p className="text-sm text-white mt-8">
         Already have an account?{' '}

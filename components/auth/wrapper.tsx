@@ -14,6 +14,7 @@ const SignInSignUp = () => {
   const handleSignInClick = () => setIsSignUp(false);
 
   return (
+  
     <div className={`container ${isSignUp ? 'sign-up-mode' : ''}`}>
       <div className="forms-container">
         <div className="signin-signup">

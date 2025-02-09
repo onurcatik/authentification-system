@@ -55,7 +55,7 @@ const NewPasswordForm = () => {
     <CardWrapper
       headerLabel="Enter a new password"
       backButtonLabel="Back to login"
-      backButtonHref="/auth/login"
+      backButtonHref="/"
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -66,15 +66,17 @@ const NewPasswordForm = () => {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel className="text-white">Password</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="******"
+                      placeholder="*****"
                       type="password"
+                      className="placeholder-white bg-blue-700 text-white p-2 rounded"
                     />
                   </FormControl>
+
                   <FormMessage />
                 </FormItem>
               )}

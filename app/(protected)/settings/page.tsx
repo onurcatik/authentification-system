@@ -827,7 +827,6 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTransition, useState } from "react";
-import { motion } from "framer-motion";
 
 import { Switch } from "@/components/ui/switch";
 import {
@@ -893,19 +892,12 @@ const SettingsPage = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.8 }}
+    <div
       className="flex justify-center items-center min-h-screen bg-white px-8"
-      // bg-gradient-to-br from-blue-500 via-blue-500 to-blue-500 
+      // bg-gradient-to-br from-blue-500 via-blue-500 to-blue-500
     >
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.4 }}
-        className="w-full max-w-4xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+      <div
+        className="w-full max-w-4xl shadow-2xl transform  transition-transform relative lg:bottom-16"
       >
         <Card className=" bg-white border border-white overflow-hidden mb-0">
           <CardHeader className="py-12 bg-gradient-to-r from-blue-500 to-blue-500 text-white">
@@ -1056,9 +1048,7 @@ const SettingsPage = () => {
                 <FormError message={error} />
                 <FormSucess message={success} />
                 <div className="text-center">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                  <div
                     className="inline-block"
                   >
                     <Button
@@ -1066,18 +1056,19 @@ const SettingsPage = () => {
                       type="submit"
                       className="px-10 py-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-500 text-white font-bold shadow-lg transform hover:translate-y-1 hover:shadow-xl"
                       // bg-gradient-to-r from-red-500 to-yellow-400
-                   >
+                    >
                       Update Settings
                     </Button>
-                  </motion.div>
+                  </div>
                 </div>
               </form>
             </Form>
           </CardContent>
         </Card>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
 export default SettingsPage;
+
