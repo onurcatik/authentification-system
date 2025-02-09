@@ -95,7 +95,7 @@ const RegisterForm = ({ onSignInClick }: RegisterFormProps) => {
       {registerError && <p className="error">{registerError}</p>}
       {registerSuccess && <p className="success">{registerSuccess}</p>}
       <input type="submit" className="btn" value="Sign up" />
-      <p className="social-text">Or Sign up with social platforms</p>
+     
       <div className="social-media">
        
        

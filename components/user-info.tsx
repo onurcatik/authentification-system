@@ -9,7 +9,7 @@ interface UserInfoProps {
 
 export const UserInfo = ({ user, label }: UserInfoProps) => {
   return (
-    <Card className="relative w-full max-w-[500px] mx-auto p-8 bg-gradient-to-br from-white via-white to-white shadow-2xl rounded-[32px] transform transition-transform hover:scale-105 mt-8 overflow-hidden ">
+    <Card className="relative w-full max-w-[500px] mx-auto p-8 bg-gradient-to-br from-white via-white to-white shadow-2xl rounded-[32px]  mt-8 overflow-hidden ">
       {/* Background Decorations */}
       <div className="absolute -top-16 -right-16 w-[200px] h-[200px] bg-gradient-to-br from-indigo-200/50 via-indigo-100/30 to-transparent rounded-full blur-2xl"></div>
       <div className="absolute -bottom-16 -left-16 w-[300px] h-[300px] bg-gradient-to-br from-indigo-200/30 via-indigo-100/20 to-transparent rounded-full blur-3xl"></div>

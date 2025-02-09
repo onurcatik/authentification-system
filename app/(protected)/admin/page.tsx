@@ -181,7 +181,7 @@ const AdminPage = () => {
 
   return (
     <div className="flex items-center justify-center min-h-auto p-4 bg-white h-[10px]">
-      <Card className="max-w-[600px] mx-auto rounded-3xl bg-white shadow-2xl overflow-hidden transform transition-transform hover:scale-105 mt-[650px]">
+      <Card className="max-w-[600px] mx-auto rounded-3xl bg-white shadow-2xl overflow-hidden  mt-[650px]">
         <div className="relative bg-gradient-to-r from-blue-500 to-blue-500 py-6 px-8">
           <CardHeader className="relative z-10 p-2 ">
             <p className="text-4xl font-bold text-white text-center tracking-wide drop-shadow-md">

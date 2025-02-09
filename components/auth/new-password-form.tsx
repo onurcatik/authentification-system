@@ -71,7 +71,7 @@ const NewPasswordForm = () => {
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="*****"
+                    
                       type="password"
                       className="placeholder-white bg-blue-700 text-white p-2 rounded"
                     />
