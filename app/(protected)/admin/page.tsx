@@ -196,7 +196,7 @@ const AdminPage = () => {
               message="Welcome, Admin! You have exclusive access."
             />
           </RoleGate>
-          <div className="flex flex-col md:flex-row items-center justify-between p-4 rounded-xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="flex flex-col md:flex-row items-center justify-between p-4 rounded-xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-lg ">
             <p className="text-base font-semibold text-gray-600 text-center md:text-left">
               Admin API Endpoint Access
             </p>
@@ -208,7 +208,7 @@ const AdminPage = () => {
             </Button>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between p-4 rounded-xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="flex flex-col md:flex-row items-center justify-between p-4 rounded-xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-lg ">
             <p className="text-base font-semibold text-gray-600 text-center md:text-left">
               Server-Side Action Testing
             </p>

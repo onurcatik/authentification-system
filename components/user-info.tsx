@@ -31,7 +31,7 @@ export const UserInfo = ({ user, label }: UserInfoProps) => {
         <InfoRow label="Role:" value={user?.role} />
 
         {/* Two Factor Authentication Section */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-3xl shadow-sm    p-5 backdrop-blur-md hover:shadow-xl transition-shadow bg-gradient-to-br from-white to-white border border-gray-300 ">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-3xl shadow-sm    p-5 backdrop-blur-md  transition-shadow bg-gradient-to-br from-white to-white border border-gray-300 ">
           <p className="text-xl font-semibold text-black">
             Two Factor Authentication
           </p>
@@ -52,11 +52,11 @@ export const UserInfo = ({ user, label }: UserInfoProps) => {
 };
 
 const InfoRow = ({ label, value }: { label: string; value?: string }) => (
-  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-3xl p-4 bg-gradient-to-r from-gray-50 via-white to-gray-50 hover:shadow-[0_0_20px_5px_rgba(255,255,255,0.6)] transition-shadow border border-gray-300 shadow-sm">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-3xl p-4 bg-gradient-to-r from-gray-50 via-white to-gray-50  transition-shadow border border-gray-300 shadow-sm">
     <p className="text-lg sm:text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-black to-black  mr-0">
       {label}
     </p>
-    <p className="truncate text-base sm:text-lg max-w-full sm:max-w-[300px] font-fancy bg-gradient-to-r from-white to-white text-black rounded-2xl px-5 py-3 shadow-inner transform hover:scale-105 transition-transform w-96 pr-0 relative">
+    <p className="truncate text-base sm:text-lg max-w-full sm:max-w-[300px] font-fancy bg-gradient-to-r from-white to-white text-black rounded-2xl px-5 py-3 shadow-inner transform  transition-transform w-96 pr-0 relative">
       {value || "N/A"}
     </p>
   </div>
